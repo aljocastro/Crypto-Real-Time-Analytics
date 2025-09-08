@@ -39,22 +39,29 @@ Volatility measures
 
 % change vs. previous record
 ✔️ Saves updated records into a CSV file (simulating a real-time feed)
-✔️ Tableau connects to the CSV and refreshes automatically for live dashboards -->!
+✔️ Tableau connects to the CSV and refreshes automatically for live dashboards -->
 
-🚀 Results
+##🚀 Results
 
-The final Tableau dashboard provides:
+Fetches live price data for multiple cryptocurrencies every minute. Transform raw API data with rolling averages (5-min, 15-min), volatility measures and % change vs. previous record. Save and load records for real-time feed and that connects and refreshes automatically to a dashboard for real-time analysis.
 
-Live Line Chart – Real-time prices over time for selected coins
+<!--The final interactive dashboard provides:
 
-24h % Change Heatmap – Compare relative performance across coins
+  * Live Line Chart – Real-time prices over time for selected coins
+  * 24h % Change Heatmap – Compare relative performance across coins
+  * Volatility Trend Chart – Identify the most stable vs. most volatile assets
+  * KPI Cards – Current price, 24h change, and trading volume
+-->
+<ins>Key Highlights:<ins/>
 
-Volatility Trend Chart – Identify the most stable vs. most volatile assets
+  📡 API Integration – Pulls live market data directly from CoinGecko
+  ⏱ Near Real-Time Updates – Fetches new records every minute
+  📊 Advanced Metrics – Rolling averages, volatility, and % changes
+  🎨 Interactive Dashboards – Built with Tableau Public
+  🧩 ETL Workflow – Extract → Transform → Load data
 
-KPI Cards – Current price, 24h change, and trading volume
-
-Dashboard Layout (conceptual):
-
+## Dashboard Layout (conceptual):
+<!--
  --------------------------------------------------------
 |   ⚡ Crypto Dashboard – Near Real-Time Monitoring      |
 |--------------------------------------------------------|
@@ -66,20 +73,10 @@ Dashboard Layout (conceptual):
 |--------------------------------------------------------|
 |  Volatility & Rolling Avg Comparison                   |
  --------------------------------------------------------
+-->
 
-🔍 Key Highlights
 
-📡 API Integration – Pulls live market data directly from CoinGecko
-
-⏱ Near Real-Time Updates – Fetches new records every minute
-
-📊 Advanced Metrics – Rolling averages, volatility, and % changes
-
-🎨 Interactive Dashboards – Built with Tableau Public
-
-🧩 ETL Workflow – Extract → Transform → Load into Tableau
-
-📜 Example Code Snippet
+##📜 Code Snippet
 def fetch_data():
     url = "https://api.coingecko.com/api/v3/simple/price"
     params = {
@@ -103,6 +100,7 @@ def fetch_data():
     
     return pd.DataFrame(rows)
 
+##Data Results
 🖼️ Sample Data Output
 timestamp	coin	price_usd	pct_change_24h	volume_24h	rolling_avg_5min	volatility_15min
 2025-08-16 17:01:00	bitcoin	61234.56	2.34	348923412.0	61012.34	0.015
