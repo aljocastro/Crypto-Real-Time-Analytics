@@ -41,7 +41,7 @@ Volatility measures
 ✔️ Saves updated records into a CSV file (simulating a real-time feed)
 ✔️ Tableau connects to the CSV and refreshes automatically for live dashboards -->
 
-##🚀 Results
+## 🚀 Results
 
 Fetches live price data for multiple cryptocurrencies every minute. Transform raw API data with rolling averages (5-min, 15-min), volatility measures and % change vs. previous record. Save and load records for real-time feed and that connects and refreshes automatically to a dashboard for real-time analysis.
 
@@ -54,30 +54,15 @@ Fetches live price data for multiple cryptocurrencies every minute. Transform ra
 -->
 <ins>Key Highlights:<ins/>
 
-  📡 API Integration – Pulls live market data directly from CoinGecko
-  ⏱ Near Real-Time Updates – Fetches new records every minute
-  📊 Advanced Metrics – Rolling averages, volatility, and % changes
-  🎨 Interactive Dashboards – Built with Tableau Public
-  🧩 ETL Workflow – Extract → Transform → Load data
+  📡 API Integration – Pulls live market data directly from CoinGecko  
+  ⏱ Near Real-Time Updates – Fetches new records every minute  
+  📊 Advanced Metrics – Rolling averages, volatility, and % changes  
+  🎨 Interactive Dashboards – Built with Tableau Public  
+  🧩 ETL Workflow – Extract → Transform → Load data  
 
-## Dashboard Layout (conceptual):
-<!--
- --------------------------------------------------------
-|   ⚡ Crypto Dashboard – Near Real-Time Monitoring      |
-|--------------------------------------------------------|
-|  KPIs:  Bitcoin $XX,XXX (+2.3%) | Ethereum $X,XXX ... |
-|--------------------------------------------------------|
-|  Line Chart: Prices over Time (per coin)               |
-|--------------------------------------------------------|
-|  Heatmap: 24h % Change by Coin                         |
-|--------------------------------------------------------|
-|  Volatility & Rolling Avg Comparison                   |
- --------------------------------------------------------
--->
-
-
-##📜 Code Snippet
-def fetch_data():
+<ins>📜 Code Snippet:<ins/>  
+```
+ def fetch_data():
     url = "https://api.coingecko.com/api/v3/simple/price"
     params = {
         "ids": ",".join(coins),
@@ -99,25 +84,36 @@ def fetch_data():
         })
     
     return pd.DataFrame(rows)
+```
 
-##Data Results
-🖼️ Sample Data Output
-timestamp	coin	price_usd	pct_change_24h	volume_24h	rolling_avg_5min	volatility_15min
-2025-08-16 17:01:00	bitcoin	61234.56	2.34	348923412.0	61012.34	0.015
+<ins>Dashboard Layout (conceptual): <ins/>
+<!--
+ --------------------------------------------------------
+|   ⚡ Crypto Dashboard – Near Real-Time Monitoring      |
+|--------------------------------------------------------|
+|  KPIs:  Bitcoin $XX,XXX (+2.3%) | Ethereum $X,XXX ... |
+|--------------------------------------------------------|
+|  Line Chart: Prices over Time (per coin)               |
+|--------------------------------------------------------|
+|  Heatmap: 24h % Change by Coin                         |
+|--------------------------------------------------------|
+|  Volatility & Rolling Avg Comparison                   |
+ --------------------------------------------------------
+-->
+
+## Data Output  
+🖼️ Sample Data Output  
+timestamp	coin	price_usd	pct_change_24h	volume_24h	rolling_avg_5min	volatility_15min  
+2025-08-16  17:01:00	 bitcoin	 61234.56	 2.34	 348923412.0	 61012.34	 0.015
 2025-08-16 17:01:00	ethereum	3421.78	1.12	23123123.0	3410.55	0.022
 2025-08-16 17:01:00	dogecoin	0.083	-0.45	9432134.0	0.081	0.034
-📈 Tableau Dashboard
 
-Built with Tableau Public
-
-Connects directly to the continuously updated CSV
-
-Provides near real-time, interactive monitoring of multiple cryptocurrencies
+📈 Tableau Dashboard  
+  * Built with Tableau Public
+  * Connects directly to the continuously updated CSV
+  * Provides near real-time, interactive monitoring of multiple cryptocurrencies
 
 ✅ This project demonstrates end-to-end analytics skills:
-
-Data Engineering (API, ETL pipeline)
-
-Data Transformation (feature engineering with Pandas)
-
-Data Visualization (dashboards in Tableau)
+  * Data Engineering (API, ETL pipeline)
+  * Data Transformation (feature engineering with Pandas)
+  * Data Visualization (dashboards in Tableau)
