@@ -1,4 +1,4 @@
-# [Python + Tableau Near Real-Time Crypto Dashboard](https://aljocastro.github.io/Crypto-Real-Time-Analytics/)
+# Python + Tableau Near Real-Time Crypto Dashboard [→](https://aljocastro.github.io/Crypto-Real-Time-Analytics/)
 
 ## 📊 Project Overview
 
